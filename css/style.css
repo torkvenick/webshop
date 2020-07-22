@@ -24,12 +24,15 @@ h1, h2, h3, h4, h5, h6{
 
 body{
     color: #2f3035;
+    font-family: 'SFProDisplay-Regular', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
 }
 .container{
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
-    font-family: sans-serif;
 }
 
 .header__top-inner{
@@ -37,4 +40,23 @@ body{
     justify-content: space-between;
     align-items: center;
     min-height: 122px;
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    font-weight: 700;
+}
+
+.menu__item{
+    display: inline-block;
+}
+.menu__item + .menu__item{
+    padding-left: 50px;
+}
+
+.header__box{
+    display: flex;
+}
+/*В макете отступ от сердечка 86px, мы сделали 60 и добавили 26 в ширину на случай если изменится название улицы. Padding слева для значка локации*/
+.header__adress{
+    margin-right: 60px;
+    width: 265px;
+    padding-left: 30px;
 }

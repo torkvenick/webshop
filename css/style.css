@@ -234,11 +234,37 @@ body{
 
 .sale-item__info{
     color: #fff;
-    padding: 8px 20px;
     background-color: #1C62CD;
-    text-transform: uppercase;
+    padding:8px 20px;
+    text-transform:uppercase;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.1em;  
+}
 
+.price{
+    font-family: 'Barlow', sans-serif;
+}
+
+.sale-item__price-new{
+    font-weight: 700;
+    color: #1C62CD;
+    font-size: 27px;
+    line-height: 32px;
+    margin-right: 6px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.sale-item__price-new::after{
+    content: '';
+    background-image: url(../images/icons-price.svg);
+    position: absolute;
+    right: 0;
+    width: 15px;
+    height: 18px;
+}
+
+.sale-item__price-old{
+    font-weight: 400;
 }

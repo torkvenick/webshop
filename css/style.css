@@ -396,6 +396,11 @@ body{
 .categories__item{
     margin-bottom: 30px;
     border: 1px solid #CDCDCD;
-    box-sizing: border-box;
     border-radius: 3px;
+    max-width: 370px;
+    display: flex;
+}
+
+.categories__item-info{
+    width: 50%;
 }

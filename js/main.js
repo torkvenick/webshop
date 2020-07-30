@@ -8,14 +8,19 @@ $(function(){
 
        /*  При клике на один из айтемов мы вырубаем обработчик стандартной посылки и убираем класс active, потому что он должен перейти к другому элементу. При нажатии на один из айтемов - все покрашилось, потому что активность убралась и вместо display:block вылез display:none  */
 
-    $('.search__tabs-item').on('click', function(e){
+        /*Здесь мы меняем search__tabs-item на tab */
+    $('.tab').on('click', function(e){
         e.preventDefault();
-
-        $('.search__tabs-item').removeClass('search__tabs-item--active');
-        $('.search__content-item').removeClass('search__content-item--active');
         
-        $(this).addClass('search__tabs-item--active');
-        $($(this).attr('href')).addClass('search__content-item--active');
+        /*Здесь мы меняем search__tabs-item на tab */
+        $('.tab').removeClass('tab--active');
+        
+        /* .search__content-item меняем на tabs-content */
+        /* search__content-item--active заменяем на tabs-content--active */
+        $('.search__content-item').removeClass('tabs-content--active');
+        
+        $(this).addClass('tab--active');
+        $($(this).attr('href')).addClass('tabs-content--active');
     });
 
 });

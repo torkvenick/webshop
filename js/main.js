@@ -14,10 +14,9 @@ $(function(){
         
         /*Здесь мы меняем search__tabs-item на tab */
         $('.tab').removeClass('tab--active');
-        
+        $('.tabs-content').removeClass('tabs-content--active');
         /* .search__content-item меняем на tabs-content */
         /* search__content-item--active заменяем на tabs-content--active */
-        $('.search__content-item').removeClass('tabs-content--active');
         
         $(this).addClass('tab--active');
         $($(this).attr('href')).addClass('tabs-content--active');

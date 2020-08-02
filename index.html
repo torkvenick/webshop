@@ -280,7 +280,25 @@
 
             </div>
             <div class="tabs-content products__content">
-              product-slider
+              <div class="product-slider">
+                <div class="product-slider__item">
+                  <div class="product-item__wrapper"> <!-- Див создан для создания обертки всему блоку, но для вынесения кнопок за пределы ссылки во избежание обновления страницы. Чтобы сердечко работало. надеюсь я понял что написал-->
+                    <button class="product-item__favorite"></button>
+                    <button class="product-item__basket">
+                      <img src="images/basket-white.svg" alt="">
+                    </button>
+                    <a class="product-item" href="#">
+                      <img class="product-item__img" src="images/content/product-1.png" alt="">
+                      <h4 class="product-item__title">
+                        Водонепроницаемый рюкзак
+                      </h4>
+                      <p class="price product-item__price">
+                        9 800 ₽
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="tabs-content products__content"></div>
             <div class="tabs-content products__content"></div>

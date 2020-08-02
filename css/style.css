@@ -448,3 +448,79 @@ body{
     content: url('../images/link-arrow.svg');
     padding-left: 2px;
 }
+
+.product-item__wrapper{
+    position: relative;
+    width: 271px;
+}
+
+
+.product-item{
+    border: 1px solid #CDCDCD;
+    border-radius: 3px;
+    /* Здесь был позишн релатив. Теперь он в wrapper. Ширину тоже перенесли */
+    text-align: center;
+    padding: 52px 20px 31px;
+}
+
+.product-item__title{
+    font-weight: normal;
+    padding: 14px 0 25px;
+}
+/* На данный момент при нажатии на красный квадрат ака сердечко, перенаправляет на верх страницы. Позже исправим */
+.product-item__favorite{
+    background-color: transparent;
+    border: none;
+    height: 22px;
+    outline: none;
+    position: absolute;
+    right: 19px;
+    top: 16px;
+    width: 24px;
+    z-index: 5;
+}
+
+.product-item__favorite::before{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 22px;
+    top: 0;
+    left: 0;
+    background-image: url(../images/favorite.svg);
+}
+
+.product-item__favorite--active::before{
+    background-image: url(../images/favorite-active.svg);
+}
+
+.product-item__price{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.product-item__basket{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: #1c62cd;
+    border-radius: 10px 0px 0px 0px;
+    bottom: 0;
+    right: 0;
+    padding-top: 7px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/*  Сделано для примера, потому что лектор сделал ошибку и таким образом пытался отобразить корзину. Прибережем.
+    .product-item__basket::before{
+    content: "";
+    background-image: url('..images/basket-white.svg');
+    width: 30px;
+    height: 23px;
+    background-repeat: no-repeat;
+    top: 10px;
+    left: 14px;
+} */

@@ -173,7 +173,7 @@ body{
     max-width: 870px;
 }
 
-.banner-section__slider-btn {
+.banner-section__slider-btn,.product-slider__slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -346,11 +346,12 @@ body{
     font-family: 'SFProDisplay-Bold', sans-serif;
 }
 
-.search__content-item{
+/* search__content-item меняем на tabs-content  */
+.tabs-content{ 
     display: none;
 }
 
-.search__content-item.tabs-content--active{
+.tabs-content.tabs-content--active{
     display: block;
 }
 
@@ -456,11 +457,13 @@ body{
 
 
 .product-item{
+    min-height: 400px;
     border: 1px solid #CDCDCD;
     border-radius: 3px;
     /* Здесь был позишн релатив. Теперь он в wrapper. Ширину тоже перенесли */
     text-align: center;
     padding: 52px 20px 31px;
+    transition: all .3s;
 }
 
 .product-item__title{
@@ -504,7 +507,7 @@ body{
     position: absolute;
     width: 60px;
     height: 40px;
-    background-color: #1c62cd;
+    background: #1c62cd;
     border-radius: 10px 0px 0px 0px;
     bottom: 0;
     right: 0;
@@ -512,7 +515,129 @@ body{
     cursor: pointer;
     border: none;
     outline: none;
+    z-index: 10;
 }
+
+.product-item__hover-text{
+    padding: 18px 21px;
+    background-color: rgba(255,255,255,.9);
+    /* здесь был opacity, но мы его убрали, так как он влиял и на текст. Взамен применили rgba строкой выше */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.product-item:hover .product-item__hover-text{
+    opacity: 1;
+    color: #2F3035;
+}
+
+.product-item:hover{
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    color: #1C62CD;
+}
+
+.product-item:hover .product-item__notify-text{
+    color: #2f3035;
+}
+
+.product-item--sale::before{
+    content: "SALE";
+    padding: 8px 15px;
+    background-color: #1C62CD;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__price{
+    display: none;
+}
+
+.product-item__notify-text{
+    display: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-text{
+    display: block;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__basket{
+    display: none;
+}
+
+.product-item__notify-link{
+    display: none;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__title{
+    padding-bottom: 13px;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-link{
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    color: #1C62CD;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.product-item__wrapper.product-item__not-available .product-item__notify-link span{
+    border-bottom: 1px solid #1C62CD;
+    text-align: center;
+}
+
+.product__title{
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 25px;
+}
+
+.products__tab + .products__tab{
+    margin-left: 50px;
+}
+
+.products__tabs{
+    margin-bottom: 25px;
+}
+
+.products__tab{
+    padding-bottom: 10px;
+}
+
+.products__tab.tab--active{
+    border-bottom: 2px solid #1C62CD;
+}
+
+.product-slider__slider-btnprev{
+    left: -40px;
+    outline: none;
+}
+
+.product-slider__slider-btnnext{
+    right: -20px;
+    outline: none;
+}
+
+
 
 /*  Сделано для примера, потому что лектор сделал ошибку и таким образом пытался отобразить корзину. Прибережем.
     .product-item__basket::before{

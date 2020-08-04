@@ -219,7 +219,8 @@ body{
     background-color: transparent;
 }
 
-.slick-active button{
+/* Добавив сюда li, в товарах снова показалась корзина */
+.slick-active li button{
     background-color: #fff;
 }
 
@@ -635,6 +636,24 @@ body{
 .product-slider__slider-btnnext{
     right: -20px;
     outline: none;
+}
+
+.slick-slide img{
+    display: inline;
+}
+
+.product__more{
+    text-align: center;
+    margin: 35px 0 80px;
+}
+
+.product__item-link{
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: #F0F0F4;
+    padding: 16px 43px;
 }
 
 

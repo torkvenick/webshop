@@ -642,18 +642,26 @@ body{
     display: inline;
 }
 
-.product__more{
-    text-align: center;
-    margin: 35px 0 80px;
+.products{
+    margin-bottom: 80px;
 }
 
-.product__item-link{
+.product__more{
+    text-align: center;
+    margin: 35px 0 0px;
+}
+
+.product__more-link{
     font-size: 15px;
     line-height: 18px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     background: #F0F0F4;
     padding: 16px 43px;
+}
+
+.banner{
+    margin-bottom: 80px;
 }
 
 

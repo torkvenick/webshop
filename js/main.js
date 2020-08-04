@@ -13,8 +13,8 @@ $(function(){
         e.preventDefault();
         
         /*Здесь мы меняем search__tabs-item на tab */
-        $('.tab').removeClass('tab--active');
-        $('.tabs-content').removeClass('tabs-content--active');
+        $($(this).siblings()).removeClass('tab--active');
+        $($(this).parent().siblings().find('div')).removeClass('tabs-content--active');
         /* .search__content-item меняем на tabs-content */
         /* search__content-item--active заменяем на tabs-content--active */
         
@@ -23,7 +23,7 @@ $(function(){
     });
 
     $('.product-item__favorite').on('click' , function (){
-      $('.product-item__favorite').toggleClass('product-item__favorite--active')
+      $(this).toggleClass('product-item__favorite--active')
     });
 
     $('.product-slider').slick({

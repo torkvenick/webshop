@@ -32,8 +32,12 @@ $(function(){
         prevArrow: '<button class="product-slider__slider-btn product-slider__slider-btnprev"><img src="images/arrow-black-left.svg" alt=""></button>',
         nextArrow: '<button class="product-slider__slider-btn product-slider__slider-btnnext"><img src="images/arrow-black-right.svg" alt=""></button>'
     });
-
+ 
     $('.filter-style').styler();
 
+    $('.filter__item-drop').on('click', function(){
+        $(this).toggleClass('filter__item-drop--active');
+        $(this).next().slideToggle(200);
+    });
 
 });

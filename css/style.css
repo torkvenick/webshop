@@ -454,8 +454,16 @@ body{
 .product-item__wrapper{
     position: relative;
     width: 271px;
+    transition: all .3s;
 }
 
+.product-item__wrapper.product-item__wrapper--list{
+    width: 100%;
+}
+
+.product-item{
+    width: 100%;
+}
 
 .product-item{
     min-height: 400px;
@@ -470,8 +478,10 @@ body{
 .product-item__title{
     font-weight: normal;
     padding: 14px 0 25px;
+    font-size: 18px;
+    line-height: 21px;
 }
-/* На данный момент при нажатии на красный квадрат ака сердечко, перенаправляет на верх страницы. Позже исправим */
+/* На данный момент при нажатии на красный квадрат ака сердечко, перенаправляет на верх страницы. Позже исправим. Исправлено*/
 .product-item__favorite{
     background-color: transparent;
     border: none;
@@ -815,6 +825,12 @@ body{
 
 .catalog__filter-items button + button{
     margin-left: 8px;
+    cursor: pointer;
+}
+
+.catalog__filter-btn{
+    display: flex;
+    align-items: center;
 }
 
 .catalog__filter-btn button{
@@ -830,11 +846,31 @@ body{
 }
 
 button.catalog__filter-btngrid{
+    width: 26px;
+    height: 21px;
 
 }
 
 button.catalog__filter-btnline{
+    width: 25px;
+    height: 19px;
+}
 
+.catalog__filter-button{
+    opacity: 0.3;
+    outline: none;
+} 
+
+.catalog__filter-button--active{
+    opacity: 1;
+}
+
+.select-item{
+    border: 1px solid #D7D9DF;
+    margin-right: 34px;
+    padding: 7px 10px 7px 20px;
+    font-size: 14px;
+    line-height: 17px; 
 }
 
 .catalog__inner{
@@ -1103,7 +1139,6 @@ button.catalog__filter-btnline{
     line-height: 17px;
     color: #48494D;
     font-family: 'Barlow', sans-serif;
-
     height: 20px;
     padding: 0 25px 0 10px; /* 25px чтобы влезло в одну строку Мощность двигателя л.с. */
 
@@ -1176,14 +1211,132 @@ button.catalog__filter-btnline{
     padding: 0;
 }
 
+.filter-search{
+    width: 100%;
+    border: 1px solid #E0E0E0;
+    font-size: 12px;
+    line-height: 14px; 
+    height: 30px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
 
+.filter-search::placeholder{
+    color: #BDBEC2;
+}
 
+.btn-checked .aside-filter__content{
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
 
+.btn-checked .aside-filter__content-box{
+    width: auto;
+}
 
+.btn-checked .aside-filter__content-label{
+    position: relative;
+    height: 25px;
+    width: 63px;
+    color: #C4C4C4;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+}
 
+.btn-checked .jq-checkbox{
+    background: #F0F0F4;
+    height: 25px;
+    width: 63px;
+    border: none;
+}
 
+.btn-checked .jq-checkbox.checked{
+    background: #1C62CD;
+    color: #fff;
+}
 
+.btn-checked .jq-checkbox.checked ~ .btn-checked__text{
+    color: #fff;  
+}
 
+.btn-checked .jq-checkbox.checked .jq-checkbox__div{
+    display: none;
+}
+
+.btn-checked__text{
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-57%);
+    z-index: 5;
+}
+
+.filter-btn__send{
+    background: #F0F0F4;
+    text-transform: uppercase;
+    padding: 16px 85px;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    color: #BDBEC2;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.filter-btn__send--active{
+    background-color: #1c62cd;
+    color: #fff;
+    border: none;
+}
+
+.aside-filter__item-btn{
+    text-align: center;
+}
+
+.filter__extra{
+    font-size: 13px;
+    line-height: 16px;
+    position: relative;
+    padding-right: 29px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.filter__extra::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    background-image: url('../images/arrow-down.svg');
+    /* для отображения картинки нужно прописать размер */
+    width: 12px;
+    height: 8px;
+    top: 4px;
+}
+
+.filter__extra-content{
+    display: none;
+}
+
+.filter__extra.filter__item-drop--active::after{
+    transform: rotate(180deg);
+}
+
+.filter-btn__reset{
+    font-size: 13px;
+    line-height: 16px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    color: #C4C4C4;
+    display: inline-block;
+    border-bottom: 1px solid #C4C4C4;
+}
 
 
 

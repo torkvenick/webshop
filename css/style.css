@@ -1413,6 +1413,11 @@ button.catalog__filter-btnline{
     margin-bottom: 50px;
 }
 
+.product-card__icon-favorite , .product-card__icon-scale{
+    border: none;
+    background: #fff;
+}
+
 .product-card__tab{
     font-size: 20px;
     line-height: 24px;
@@ -1420,6 +1425,7 @@ button.catalog__filter-btnline{
     opacity: 0.6;
     padding-bottom: 5px;
     padding-right: 17px;
+    margin-bottom: 5px;
 }
 
 .product-card__tab + .product-card__tab{
@@ -1431,14 +1437,49 @@ button.catalog__filter-btnline{
     border-bottom: 2px solid #1C62CD;
     font-weight: bold;
     font-family: 'SFProDisplay-Bold', sans-serif;
+}
+
+.product-card__item{
+    border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+    padding: 15px 0 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'SFProDisplay-Regular', sans-serif;
+}
+
+.product-card__item-left{
+    padding-right: 15px;
+}
+
+.product-card__item-right{
+    width: 125px;
+}
+
+.product-card__more{
+    font-size: 14px;
+    line-height: 17px;
+    color: #1C62CD;
+    border-bottom: 1px solid #1C62CD;
+}
+
+.product-card__list{
     margin-bottom: 20px;
 }
 
-
-
-
-
-
+.product-card__btn button{
+    line-height: 17px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 16px 56px;
+    background: #1C62CD;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
 
 /*  Сделано для примера, потому что лектор сделал ошибку и таким образом пытался отобразить корзину. Прибережем.
     .product-item__basket::before{

@@ -271,7 +271,7 @@ body{
 
 .sale-item__price-new::after{
     content: '';
-    background-image: url(../images/icons-price.svg);
+    background-image: url('../images/icons-price.svg');
     position: absolute;
     right: 0;
     top: 8px;
@@ -293,7 +293,7 @@ body{
 
 .sale-item__price-old::after{
     content: '';
-    background-image: url(../images/icons-price-old.svg);
+    background-image: url('../images/icons-price-old.svg');
     position: absolute;
     right: -10px;
     top: 5px;
@@ -1336,6 +1336,102 @@ button.catalog__filter-btnline{
     color: #C4C4C4;
     display: inline-block;
     border-bottom: 1px solid #C4C4C4;
+}
+
+.product-card{
+    margin-bottom: 80px;
+}
+
+.product-card__inner{
+    display: flex;
+    justify-content: space-between;  
+}
+
+
+.product-card__img-box{
+    width: 500px;
+    padding-top: 64px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+}
+
+.product-card__img-box::before{
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    padding: 13px 25px;
+    border-radius: 3px;
+}
+
+.product-card__price-old{
+    font-size: 30px;
+    line-height: 44px;
+    opacity: 0.6;
+    color: #2F3035;
+    display: inline-block;
+    background-image: url(../images/old-line.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-card__price-new{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 17px;
+}
+ 
+.product-card__link{
+    font-size: 15px;
+    line-height: 18px;
+    border-bottom: 1px solid #1C62CD;
+    color: #1C62CD;
+}
+
+.product-card__content{
+    width: 570px;
+}
+
+.product-card__title{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    margin-bottom: 10px;
+}
+
+.product-card__code{
+    font-size: 15px;
+    line-height: 18px;
+    color: #2F3035;
+    opacity: 0.6;
+    margin-bottom: 22px;
+}
+
+.product-card__buttons{
+    margin-bottom: 50px;
+}
+
+.product-card__tab{
+    font-size: 20px;
+    line-height: 24px;
+    color: #2F3035;
+    opacity: 0.6;
+    padding-bottom: 5px;
+    padding-right: 17px;
+}
+
+.product-card__tab + .product-card__tab{
+    padding-left: 17px;
+}
+
+.product-card__tab.tab--active{
+    opacity: 1;
+    border-bottom: 2px solid #1C62CD;
+    font-weight: bold;
+    font-family: 'SFProDisplay-Bold', sans-serif;
+    margin-bottom: 20px;
 }
 
 

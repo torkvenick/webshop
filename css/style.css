@@ -1481,6 +1481,20 @@ button.catalog__filter-btnline{
     cursor: pointer;
 }
 
+.product-card__buttons a + a{
+    margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*  Сделано для примера, потому что лектор сделал ошибку и таким образом пытался отобразить корзину. Прибережем.
     .product-item__basket::before{
     content: "";
